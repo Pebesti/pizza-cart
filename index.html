@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="simple-grid.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizza</title>
+</head>
+<style>
+body {background-color:#DCCCA3 ; }
+.small{background-color: #ffab4967;}
+.medium {background-color: #e2b6cf;}
+.large {background-color: #90aa86;}
+footer {background-color: #a04668 ; text-align: center;}
+.pad{padding-left: 1em; padding-right: 1em;}
+</style>
+<body>
+    <h1 class="center">Perfect Pizza</h1> 
+    <div class="container">
+    <div class="row">
+      <div class="col-3 small" >
+        <h2>Small Pizza</h2>
+       <img class="pad" width=100 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8B7QYjxPmR5zAhljumo0stxmDqsY55puf1Q&usqp=CAU" alt=""s>
+       <p class="pad">
+           R40.00 <br>
+          Customise the pizza using the following ingredients chicken , Mushroom , Beef, Diced Tomato, Green Pepper, Jalapenos, Marinara Sauce, Mozzarella Cheese, Red Onion, Spring Onion
+       </p>
+       <input type="button" value="Add to order" class="small center2 override_center">
+      </div>
+      <div class="col-3 medium">
+        <h2>Medium Pizza</h2>
+        <img class="pad" width=100 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8B7QYjxPmR5zAhljumo0stxmDqsY55puf1Q&usqp=CAU"alt="">
+        <p class="pad">
+            R70.00 <br>
+            Customise the pizza using the following ingredients chicken , Mushroom , Beef, Diced Tomato, Green Pepper, Jalapenos, Marinara Sauce, Mozzarella Cheese, Red Onion, Spring Onion.
+        </p>
+        <input type="button" value="Add to order" class="medium center2 override_center">
+      </div>
+      <div class="col-3 large">
+        <h2>Large Pizza</h2>
+    <img class="pad" width=100 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8B7QYjxPmR5zAhljumo0stxmDqsY55puf1Q&usqp=CAU" alt="">
+<p class="pad">
+    R120.00 <br>
+    Customise the pizza using the following ingredients chicken , Mushroom , Beef, Diced Tomato, Green Pepper, Jalapenos, Marinara Sauce, Onion. <br><br>
+</p>
+<input type="button" value="Add to order" class="large center2 override_center">
+</div>
+<section class="col-3">
+    <h3 class="show card-title">Shopping Cart</h3>
+    <table id="clear-cart" style="display: none;">
+        <thead>
+            <tr>
+                <td>Pizza Size</td>
+                <td>Quantity</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="small" style="display:none">
+                <td>Small Pizza</td>
+                <td>
+                    <input type="button" value="+" id="add_small_pizza" class="button">
+                    <input type="button" value="-" id="minus_small_pizza" class="button">
+                </td>
+                <td>R<span class="small_pizza_price">0.00</td>
+            </tr>
+            <tr id="medium" style="display:none">
+                <td>Medium Pizza</td>
+                <td>
+                    <input type="button" value="+" id="add_mid_pizza" class="button">
+                    <input type="button" value="-" id="minus_mid_pizza" class="button">
+                </td>
+                <td>R<span class="medium_pizza_price">0.00</td>
+            </tr>
+            <tr id="large" style="display:none">
+                <td>Large Pizza</td>
+                <td class="joinTags">
+                    <input type="button" value="+" id="add_large_pizza" class="button">
+                    <input type="button" value="-" id="minus_large_pizza" class="button">
+                </td>
+                <td>R<span class="large_pizza_price">0.00</td>
+            </tr>
+            <tr>
+                <td>Total cost</td>
+                <td></td>
+                <td><input type="text" name="cost"  class="total-cost" readonly placeholder="0.00"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="display: none;" class="center theMessage">
+We will display a message here when the button is pressed...
+</div>
+    <div class="space-between-elements payment" style="display: none;">
+            <label for="payment" class="center-label pay"><em>Payment amount:</em></label>
+            <input type="text" name="pay" id="pay" class="cost">
+    </div>
+    <input type="button" value="Checkout" id="check" style="display: none;" class="center2 checkout">
+</div>
+</section>
+      </div>
+    </div>
+<footer>
+    <p>
+         Contact : +27628361362 <br> 	
+         Email: Pebetsi.pizza@gmail.com
+
+    </p>
+</footer>
+</body>
+
+<script src="shopping_cart.js"></script>
+</html>
